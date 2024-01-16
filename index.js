@@ -23,16 +23,16 @@ app.use("/editjob", editJobRoute);
 app.use("/filterjobs", filterJobsRoute);
 app.use("/detaildesc", detailDescOfjobRoute);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 app.get("/", (req, res) => {
-  res.status(200).json({message:"Backend Capstone Project"});
+  res.status(200).json({ message: "Backend Capstone Project" });
 });
 
 // Health API
 
 app.get("/health", (req, res) => {
-  res.status(200).json({message:"Server is running successfully"});
+  res.status(200).json({ message: "Server is running successfully" });
 });
 
 // Route not found Middleware
