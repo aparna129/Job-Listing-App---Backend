@@ -19,7 +19,7 @@ router.post("/", async (req, res, next) => {
 
     if (passwordMatched) {
       jwttoken = jwt.sign({ email }, process.env.JWT_SECRETKEY, {
-        expiresIn: "2h",
+        expiresIn: "24h",
       });
       return res.status(200).json({
         message: "Logged in successfully",
